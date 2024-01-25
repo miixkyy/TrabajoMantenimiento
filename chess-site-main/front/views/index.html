@@ -1,0 +1,64 @@
+<html>
+    <head>
+        {{> head}}
+    </head>
+    <body>
+        <img src="/public/img/horse.png" class="horse" alt="">
+        <div class="home" id="home">
+            <div class="info">
+                <h1>Kings of the Board</h1>
+                <h3>Juego de Chess Online</h3>
+                <div class="contenedor">
+                    <div class="fila">
+                      <div class="columna"><img src="/public/img/piece1.png" alt="Imagen 1"></div>
+                      <div class="columna"><img src="/public/img/piece4.png" alt="Imagen 2"></div>
+                    </div>
+                    <div class="fila">
+                      <div class="columna"><img src="/public/img/piece2.png" alt="Imagen 4"></div>
+                      <div class="columna"><img src="/public/img/piece5.png" alt="Imagen 5"></div>
+                    </div>
+                    <div class="fila">
+                        <div class="columna"><img src="/public/img/piece3.png" alt="Imagen 4"></div>
+                        <div class="columna"><img src="/public/img/piece6.png" alt="Imagen 5"></div>
+                    </div>
+                  </div>
+                <div onclick="form()" class="a"><a>PLAY </a></div>  
+                
+            </div>
+            <div class="tablero">
+                <img id="imagen1" src="/public/img/imagen1.png" alt="">
+                <img id="imagen2" src="/public/img/imagen2.png" alt="">
+            </div>
+        </div>
+        <div class="container-form" id="container-form">
+            <h2>Kings of <br> the Board</h2>
+            <input type="text" id="codeInput">
+            <div class="botones">
+                <button id="createGame">Create</button>
+                <button id="joinGame">Join</button>
+            </div>
+            <div style="color: red" id="errorMessage"></div>
+        </div>
+
+        <script>
+            $('#createGame').on('click', function() {
+                window.location.replace('/white?code=' + $('#codeInput').val());
+            });
+            $('#joinGame').on('click', function() {
+                window.location.replace('/black?code=' + $('#codeInput').val());
+            });
+
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('error') == 'invalidCode') {
+                $('#errorMessage').text('Invalid invite code');
+            }
+        </script>
+        <script>
+            function form() {
+                $("#home").css("display", "none");
+                $("#container-form").css("display", "block");
+            }
+
+        </script>
+    </body>
+</html>
