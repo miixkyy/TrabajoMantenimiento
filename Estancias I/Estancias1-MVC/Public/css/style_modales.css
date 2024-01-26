@@ -1,0 +1,545 @@
+:root{
+    --rojo:#A7201F;
+    --border: .1rem solid rgba(0,0,0,.12);
+    --porciento: 22%;
+    --prueba: 1px solid red
+}
+/*Imagen modal*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+.modal .modal-content {
+    display: block;
+    margin: auto;
+    margin-top: 2.5rem;
+    height: 85%;
+}
+  
+.modal .close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 35px;
+    font-weight: lighter;
+    transition: 0.3s;
+}
+  
+.modal .close:hover,
+.modal .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+  
+
+/*Modal Formulario*/
+.modal_form {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: right;
+}
+
+.modal_form .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    width: 32%;
+    padding-top: 2rem;
+    border-radius: 1rem;
+}
+
+.modal_form .modal-content .closer {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+.modal_form .modal-content .closer h2{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.modal_form .modal-content .close_form {
+    color: #aaa;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.modal_form .modal-content .close_form:hover,
+.modal_form .modal-content .close_form:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal_form .modal-content form {
+    text-align: left;
+    padding: 2rem;  
+    padding-top: 0rem;
+    padding-right: 0rem;
+    text-align: center;
+}
+
+.modal_form .modal-content form label {
+    display: block;
+    margin: 8px 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal_form .modal-content form input[type="text"],
+.modal_form .modal-content form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 0.3rem;
+    box-shadow: 0 .3rem 1.3rem rgba(0,0,0,.02);
+}
+.modal_form .modal-content form textarea{ 
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2px;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 0.3rem;
+    box-shadow: 0 .3rem 1.3rem rgba(0,0,0,.02);
+}
+.modal_form .modal-content form .imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal_form .modal-content form input[type="submit"] {
+    background-color: var(--rojo);
+    color: white;
+    padding: 10px 10rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: calc(100%-1rem);
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.modal_form .modal-content form input[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/*Input imagen*/
+.custom-file-upload {
+    display: flex;
+    position: relative;
+}
+
+.custom-file-upload:hover {
+    background-color: #ffff;
+}
+
+.custom-file-upload input {
+    display: flex;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 .3rem 1.3rem rgba(0,0,0,.05);
+    border: 1px solid rgb(240, 240, 240);
+    width: 10rem;
+    outline: none;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    
+}
+
+::-webkit-file-upload-button{
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    color: #ffff;
+    background: var(--rojo);
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 1rem;
+}
+::-webkit-file-upload-button:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+/*Modal Formulario edit*/
+.modal_edit {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: right;
+}
+
+.modal_edit .modal-edit-content {
+    background-color: #fff;
+    margin: 5% auto;
+    width: 32%;
+    padding-top: 2rem;
+    border-radius: 1rem;
+}
+
+.modal_edit .modal-edit-content .closer {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+.modal_edit .modal-edit-content .closer h2{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.modal_edit .modal-edit-content .close_edit {
+    color: #aaa;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.modal_edit .modal-edit-content .close_edit:hover,
+.modal_edit .modal-edit-content .close_edit:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal_edit .modal-edit-content form {
+    text-align: left;
+    padding: 2rem;  
+    padding-top: 0rem;
+    padding-right: 0rem;
+}
+
+.modal_edit .modal-edit-content form label {
+    display: block;
+    margin: 8px 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal_edit .modal-edit-content form input[type="text"],
+.modal_edit .modal-edit-content form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 0.3rem;
+    box-shadow: 0 .3rem 1.3rem rgba(0,0,0,.02);
+}
+.modal_edit .modal-edit-content form textarea{ 
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 0.3rem;
+    box-shadow: 0 .3rem 1.3rem rgba(0,0,0,.02);
+}
+.modal_edit .modal-edit-content form .imagenes{
+    display: flex;
+    align-items: center;
+}
+
+.modal_edit .modal-edit-content form .imagenes img{
+    height: 10rem;
+    border-radius: 0.5rem;
+}
+.modal_edit .modal-edit-content form .imagenes .img{
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 15rem;
+}
+
+.modal_edit .modal-edit-content form input[type="submit"] {
+    background-color: var(--rojo);
+    color: white;
+    padding: 10px 10rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: calc(100%-1rem);
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.modal_edit .modal-edit-content form input[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/*Modal visualizar*/
+.modal_vis {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: right;
+}
+
+.modal_vis .modal-vis-content {
+    background-color: #fff;
+    margin: 3% auto;
+    width: 53%;
+    padding: 3rem 0rem;
+    border-radius: 0.7rem;
+}
+
+.modal_vis .modal-vis-content .closer {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+.modal_vis .modal-vis-content .closer h2{
+    font-size: 4rem;
+    color:#333;
+    line-height: 5.5rem;
+}
+
+.modal_vis .modal-vis-content .closer h1{
+    font-size: 4rem;
+    color:#333;
+    line-height: 5.5rem;
+}
+.modal_vis .modal-vis-content .closer p{
+    font-size: 1.5rem;
+    text-align: center;
+    color:#1a1a1a;
+    margin-right: 2rem;
+}
+.modal_vis .modal-vis-content .closer p #underline{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.modal_vis .modal-vis-content .close_vis {
+    color: #aaa;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    margin-right: 2rem;
+}
+
+.modal_vis .modal-vis-content .close_vis:hover,
+.modal_vis .modal-vis-content .close_vis:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal_vis .modal-vis-content .texto {
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+}
+
+.modal_vis .modal-vis-content .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 3rem;
+}
+
+.modal_vis .modal-vis-content img {
+    height: 17rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 .3rem 1.3rem rgba(0,0,0,.09);
+    border:.1rem solid rgba(0,0,0,.1);
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra */
+}
+
+/* Estilos para el pulgar (thumb) de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #999; /* Color del pulgar */
+    border-radius: 5px; /* Radio de borde del pulgar */
+}
+
+/* Estilos para el pulgar (thumb) de la barra de desplazamiento al pasar el ratón por encima */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color del pulgar al pasar el ratón por encima */
+}
+
+/*Agregar publicacion*/
+.agregar input{
+    width: auto;
+    background-color: #d3d2d2;
+    border-radius: 2rem;
+    padding: 1rem 0rem 1rem 1rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+.agregar{
+    margin-top: 1rem;
+    border:.1rem solid rgba(0,0,0,.1);
+}
+.agregar:hover{
+    color: black !important;
+    background-color: #fff !important;
+    box-shadow: 0 .3rem 1.3rem rgba(0,0,0,.09);
+}
+
+/*Selectors*/
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+/* Eliminamos la fecha que por defecto aparece en el desplegable */
+.content-select select::-ms-expand {
+    display: none;
+}
+
+.content-select{
+	position: relative;
+    margin-bottom: 5px;
+}
+
+.content-select select{
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0; 
+	background: #ffff;
+	font-size: 1.1rem;
+	color: #999;
+	font-family:'Quicksand', sans-serif;
+	border: 1px solid rgb(228, 228, 228);
+    box-shadow: 0 .3rem 1.3rem rgba(0,0,0,.02);
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.content-select select:hover{
+	border-color: #A7201F;
+}
+
+/* 
+Creamos la fecha que aparece a la izquierda del select.
+Realmente este elemento es un cuadrado que sólo tienen
+dos bordes con color y que giramos con transform: rotate(-45deg);
+*/
+.content-select i{
+	position: absolute;
+	right: 20px;
+	top: calc(50% - 13px);
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-left:3px solid #A7201F;
+	border-bottom:3px solid #A7201F;
+	transform: rotate(-45deg); /* Giramos el cuadrado */
+	transition: all 0.25s ease;
+}
+
+.content-select:hover i{
+	margin-top: 3px;
+}
+
+
+@media (max-width:900px){
+    
+    .modal_vis .modal-vis-content, .modal_edit .modal-edit-content, .modal_form .modal-content {
+        margin: 10% auto;
+        width: 70%;
+        padding: 2rem 0rem;
+    }
+
+}
+
+@media (max-width:600px){
+    
+    .modal_vis .modal-vis-content, .modal_edit .modal-edit-content, .modal_form .modal-content {
+        margin: 20% auto;
+        width: 90%;
+        padding: 2rem 0rem;
+    }
+
+    .modal_vis .modal-vis-content img {
+        height: 13rem;
+    }
+
+    scroll-container { 
+        height: 37rem;
+    }
+    
+    scroll-container-publi { 
+        height: 40rem;  
+    }
+}
+
+@media (max-width:400px){
+    
+    .modal_vis .modal-vis-content, .modal_edit .modal-edit-content, .modal_form .modal-content {
+        margin: 25% auto;
+        width: 92%;
+        padding: 2rem 0rem;
+    }
+
+    .modal_vis .modal-vis-content img {
+        height: 11rem;
+    }
+
+    .modal .modal-content {
+        margin-top: 10rem;
+        width: 95%;
+        height: auto;
+    }
+
+    .modal .close {
+        top: 16rem;
+        right: 20px;
+    }
+    .modal .modal-content {
+        height: auto;
+        width: 100%;
+    }
+}

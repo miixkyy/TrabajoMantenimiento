@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/4ff92c0a62.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_modales.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <input type="checkbox" name="" id="toggler" onchange="miFuncion()">
+            <label for="toggler" class="fas fa-bars"></label>
+            <h3>Departamentos</h3>
+        </div>
+
+        <div class="heading">
+            <img src="imagenes/image 1.png" alt="">
+            <h3>CBTis 130</h3>
+        </div>
+        
+        <div class="iconos">
+            <div class="icon">
+                <a class="fas fa-user dropbtn" href="inicio_de_sesion.html"></a>
+            </div>
+        </div>
+    </div>
+    <div class="nav" id="lateral">
+        <div class="departamentos">
+            <li class="poin"></i> <a class="fas fa-home"></a> Novedades</li>
+            <li><i class="far fa-circle"></i></i> Departamento 1</li>
+            <li><i class="far fa-circle"></i></i> Departamento 2</li>
+            <li><i class="far fa-circle"></i></i> Departamento 3</li>
+        </div>
+    </div>
+
+    <div class="cont">
+        <div class="encabezado">
+            <h1>Ultimas Publicaciones</h1>
+        </div>
+        
+        <div class="principal">
+            <div class="publicacion">
+                <div class="imagen">
+                    <img src="imagenes/image 3.png">
+                </div>
+                <div class="departamento">
+                    <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                </div>
+                <div class="titular">
+                    <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                </div>
+                <div class="descripcion">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id tristique ligula. Phasellus mollis hendrerit lacus at dictum. Proin rutrum lacus pellentesque justo scelerisque, sed consectetur tortor finibus. Cras efficitur libero non rhoncus interdum. Quisque non tempus arcu. Phasellus ac tellus a ex venenatis pulvinar. Donec vitae urna dolor. Morbi aliquet vitae diam sit amet mattis. Suspendisse vel lacus a leo consectetur tempus. Sed tempor cursus urna at venenatis. Mauris pulvinar, odio id tincidunt vulputate, leo libero imperdiet nunc, fermentum tempus ante sem vitae nisi. Proin vitae massa porta, sollicitudin massa nec, dictum magna.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="secciones">
+            <div class="titulo">
+                <h1>Novedades</h1>
+                <div class="linea-horizontal">
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="publicaciones">
+                <div class="publicacion" onclick="visualizar()">
+                    <div class="imagen">
+                        <img src="imagenes/image 4.png">
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion" onclick="visualizar()">
+                    <div class="imagen">
+                        <img src="imagenes/image 4.png">
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="secciones">
+            <div class="titulo">
+                <h1>Novedades</h1>
+                <div class="linea-horizontal">
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="publicaciones">
+                <div class="publicacion" onclick="visualizar()">
+                    <div class="imagen">
+                        <img src="imagenes/image 4.png">
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion" onclick="visualizar()">
+                    <div class="imagen">
+                        <img src="imagenes/image 4.png">
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secciones">
+            <div class="titulo">
+                <h1>Novedades</h1>
+                <div class="linea-horizontal">
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="publicaciones">
+                <div class="publicacion" onclick="visualizar()">
+                    <div class="imagen">
+                        <img src="imagenes/image 4.png">
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion" onclick="visualizar()">
+                    <div class="imagen">
+                        <img src="imagenes/image 4.png">
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secciones">
+            <div class="titulo">
+                <h1>Novedades</h1>
+                <div class="linea-horizontal">
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="publicaciones">
+                <div class="publicacion" onclick="visualizar()">
+                    <div class="imagen">
+                        <img src="imagenes/image 4.png">
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion" onclick="visualizar()">
+                    <div class="imagen">
+                        <img src="imagenes/image 4.png">
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+
+                <div class="publicacion">
+                    <div class="imagen">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 2.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 3.png">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="imagenes/image 4.png">
+                              </div>
+                            </div>
+        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>       
+                    </div>
+                    <div class="titulos">
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                    <div class="descripcion texto-limitado">
+                        <h1>Beyoncé rinde homenaje a bailarín apuñalado mientras bailaba su música</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!--
+        <div class="publicacion">
+            <div class="heading">
+                <div class="titulos">
+                    <div>
+                        <h1>Titular</h1>
+                        <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="descripcion">
+                <p id="modal_btn_vis" onclick="visualizar()">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem in ante accumsan fringilla. Mauris feugiat dui purus, vel maximus sem viverra non. Nulla sit amet orci nec nunc laoreet ornare. Nulla ut euismod diam. Sed et est congue, dictum est ac, venenatis massa. Pellentesque pharetra, lectus sit amet fermentum euismod, nisi ligula posuere arcu, lacinia ultricies tellus nunc et lorem. </p>
+            </div>
+            <div class="imagenes">
+                <a id="openModal">
+                    <img src="imagenes/image 2.png">
+                </a>
+                
+                <img src="imagenes/image 3.png">
+                <img src="imagenes/image 4.png">
+            </div>
+        </div>
+        -->
+    </div>
+
+    <!--Modal imagen-->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img src="imagenes/image 2.png" alt="Imagen" class="modal-content">
+    </div>
+
+
+    <!--Modal Visualizar-->
+    <div id="modal_visu" class="modal_vis">
+        <div class="modal-vis-content">
+            <span class="close_vis">&times;</span>
+            <div class="closer">
+                <h2>Titular</h2>
+                <p> <span id="underline">Docentes</span>  <span>02/20/2023</span></p>
+            </div> 
+            
+            <scroll-container-publi>
+                <scroll-page>
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan pharetra ullamcorper. Curabitur aliquam eleifend dolor, quis venenatis tellus laoreet ac. Quisque euismod velit arcu. Donec porttitor aliquet mauris sed pulvinar. Maecenas eu lacus et purus maximus sagittis. Sed fermentum sed arcu nec accumsan. Sed sed risus mollis, ultricies eros eget, imperdiet lectus. Duis nec est lacus. Fusce eu felis in ligula ullamcorper condimentum sit amet id lorem. Fusce tincidunt eleifend pretium. Maecenas quis posuere libero. Sed dictum, turpis rutrum ullamcorper ultricies, nulla ipsum euismod mauris, non ornare velit odio quis sapien. Praesent pulvinar hendrerit congue. Vivamus lacinia interdum tempor. Morbi euismod dolor ante, ut semper purus elementum imperdiet. Aenean velit mauris, molestie ac tellus et, egestas porttitor ex.
+                            <br>
+                            In consectetur nunc diam. Sed commodo scelerisque leo sed iaculis. Aliquam ornare nisi lacus, id tincidunt dui hendrerit sit amet. Nulla eleifend mollis ipsum, ut luctus ligula viverra et. Nam eget turpis orci. Sed lobortis, orci nec rutrum semper, leo nisi mollis turpis, quis faucibus enim libero ut nisi. Duis vehicula turpis vitae enim ultrices, sit amet molestie ipsum auctor. Etiam at lectus a massa sagittis posuere. Sed in tincidunt leo. Suspendisse felis felis, pharetra a ullamcorper nec, pharetra at leo. Aliquam egestas nunc nunc, vitae blandit mi sodales eu. Integer diam ligula, sagittis at arcu eu, vulputate feugiat ipsum. Nam facilisis ut quam vel lobortis. Nullam maximus condimentum urna. Donec congue, orci sit amet suscipit convallis, risus mauris aliquam mauris, ac rhoncus eros mi nec sapien.
+                        </p>
+                    </div>
+                    
+                    <div class="images">
+                        <img src="imagenes/image 2.png">
+                        <img src="imagenes/image 3.png">
+                        <img src="imagenes/image 4.png">
+                    </div>
+                </scroll-page>
+            </scroll-container-publi>
+            
+        </div>
+    </div>
+</body>
+<script src="js/script-imagen.js"></script>
+<script>
+    var mediaQuery = window.matchMedia("(max-width: 900px)");
+
+mediaQuery.addListener(function(mediaQuery) {
+var lat = document.getElementById("lateral");
+if (mediaQuery.matches) {
+    // La regla @media se cumple, realiza alguna acción
+    lat.style.display = "none"
+} else {
+    // La regla @media no se cumple, realiza alguna otra acción
+    lat.style.display = "block"
+}
+});
+</script>
+
+<!-- Al final del body -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  // Inicializar Swiper cuando el DOM esté listo
+  document.addEventListener("DOMContentLoaded", function () {
+    var mySwiper = new Swiper(".swiper-container", {
+      // Opciones del slider (puedes personalizarlo según tus necesidades)
+      loop: true,
+      spaceBetween: 30,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3000,       // Tiempo de intervalo entre diapositivas en milisegundos
+      },
+    });
+  });
+</script>
+
+</html>

@@ -1,0 +1,220 @@
+:root{
+    --rojo:#A7201F;
+    --border: .1rem solid rgba(0,0,0,.12);
+    --porciento: 20%;
+    --prueba: 1px solid red
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Calibri; 
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 71%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+.contenido{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0rem 9rem;
+}
+
+.contenido .encabezado{
+    min-width: 100%;
+}
+
+.contenido .encabezado p{
+    font-size: 1.5rem;
+    color: var(--rojo);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contenido .encabezado h1{
+    font-size: 5rem;
+    color:#333;
+    line-height: 4.7rem;
+    margin-bottom: 2rem;
+}
+
+.contenido article {
+    position: relative;
+     max-width: 50%;
+     min-width: 68%;
+     border-radius: 5px;
+}
+ 
+.contenido article p{
+     font-size: 17px;
+     color: #555;
+     margin-bottom: 15px;
+}
+
+
+.sidebar {
+    position: sticky;
+    display: flex;
+    top: 1rem;
+    right: 2rem;
+    width: 25%;
+    padding: 0;
+    max-height: 90vh;
+    margin-left: 3rem;
+}
+.sidebar .latest-news h3{
+    text-transform: uppercase;
+}
+.sidebar .latest-news .linea-horizontal {
+    height: 3px;
+    background-color: lightgray;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar .latest-news .linea-horizontal div{
+    content: "";
+    background-color: var(--rojo);
+    height: 3px;
+    width: 5rem;
+}
+.sidebar .latest-news .principal{
+    margin-bottom: 2rem;
+}
+.sidebar .latest-news .principal .imagen{
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+
+.sidebar .latest-news .principal p{
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: bold;
+    color:#1a1a1a;
+    max-height: 2.4em; /* 3 líneas * 1.2em (aprox 1.2em es el alto de una línea) */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.sidebar .latest-news .nota{
+    padding: 1rem 0px;
+    border-top: 1px solid rgb(206, 206, 206);
+    display: flex;
+}
+.sidebar .latest-news .nota .imagen{
+    width: 10rem;
+    height: 5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.sidebar .latest-news .nota .imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sidebar .latest-news .nota p{
+    margin-left: 0.7rem;
+    align-self: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+    color:#1a1a1a;
+    max-width: 200px;
+    max-height: 3.6em; /* 3 líneas * 1.2em (aprox 1.2em es el alto de una línea) */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+  .latest-news h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .latest-news ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .latest-news li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+
+
+
+
+
+.imagen{
+    width: 100%;
+    height: 35rem;
+    overflow: hidden;
+    position: relative;
+}
+.imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 35rem;
+    position: relative; /* Asegura que los botones estén relativos a este contenedor */
+    overflow: hidden;
+}
+.swiper-wrapper {
+  /* Asegurar que el contenido se ajuste dentro del contenedor */
+  display: flex;
+  /* Ocultar contenido que exceda el ancho del contenedor */
+  align-items: flex-start;
+}
+
+.swiper-slide {
+  /* Asegurar que cada diapositiva ocupe el ancho completo del contenedor */
+  flex: 0 0 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0;
+  position: absolute;
+  color: white;
+  top: 50%;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after  {
+    font-size: 10px; /* Tamaño del ícono */
+    color: white; /* Cambiar el color del ícono */
+  }
+.swiper-container:hover .swiper-button-next,
+.swiper-container:hover .swiper-button-prev {
+    opacity: 1;
+}

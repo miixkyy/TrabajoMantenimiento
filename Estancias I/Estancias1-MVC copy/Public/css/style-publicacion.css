@@ -1,0 +1,363 @@
+:root{
+    --rojo:#A7201F;
+    --border: .1rem solid rgba(0,0,0,.12);
+    --porciento: 20%;
+    --prueba: 1px solid red
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Calibri; 
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 71%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+.contenido{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0rem 9rem;
+}
+
+.contenido .encabezado{
+    min-width: 100%;
+    margin: 2rem 0rem;
+}
+
+.contenido .encabezado p{
+    font-size: 1.5rem;
+    color: var(--rojo);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.contenido .encabezado p:hover{
+    text-decoration: underline;
+}
+
+.contenido .encabezado h1{
+    font-size: 5rem;
+    color:#333;
+    line-height: 4.7rem;
+    margin-bottom: 2rem;
+}
+.contenido .encabezado .hr{
+    content: " ";
+    height: 1px;
+    background-color: rgb(223, 223, 223);
+    z-index: 10;
+}
+
+.contenido article {
+    position: relative;
+    max-width: 50%;
+    min-width: 68%;
+}
+ 
+.contenido article p{
+    font-size: 1.7rem;
+    color: #555;
+    margin-bottom: 15px;
+    white-space: pre-line;
+}
+
+
+.sidebar {
+    position: sticky;
+    display: flex;
+    top: 1rem;
+    right: 2rem;
+    width: 25%;
+    padding: 0;
+    max-height: 90vh;
+    margin-left: 3rem;
+}
+.sidebar .latest-news h3{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.sidebar .latest-news .linea-horizontal {
+    height: 3px;
+    background-color: lightgray;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar .latest-news .linea-horizontal div{
+    content: "";
+    background-color: var(--rojo);
+    height: 3px;
+    width: 5rem;
+}
+.sidebar .latest-news .principal{
+    margin-bottom: 2rem;
+}
+.sidebar .latest-news .principal .imagen{
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+.sidebar .latest-news .principal .imagen:hover + p{
+    text-decoration: underline;
+}
+.sidebar .latest-news .principal p{
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;;
+    max-height: 2.4em; /* 3 líneas * 1.2em (aprox 1.2em es el alto de una línea) */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.sidebar .latest-news .principal p:hover {
+    text-decoration: underline;
+}
+
+.sidebar .latest-news .nota{
+    padding: 1rem 0px;
+    border-top: 1px solid rgb(206, 206, 206);
+    display: flex;
+}
+.sidebar .latest-news .nota .imagen{
+    width: 7rem;
+    height: 5rem;
+    overflow: hidden;
+    position: relative;
+}
+.sidebar .latest-news .nota .imagen:hover + p{
+    text-decoration: underline;
+}
+
+.sidebar .latest-news .nota .imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sidebar .latest-news .nota p{
+    margin-left: 0.7rem;
+    align-self: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+    color: #333;;
+    width: 200px;
+    max-height: 3.2em; /* 3 líneas * 1.2em (aprox 1.2em es el alto de una línea) */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.sidebar .latest-news .nota p:hover{
+    text-decoration: underline;
+}
+
+.botones{
+    margin-top: 2rem;
+    display: flex;
+    min-width: 100%;
+    justify-content: center;
+}
+
+.btns{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--rojo);
+    padding: 0rem 1rem;
+    border-radius: 5px;
+    line-height: 2rem;
+    margin: 0rem 0.5rem;
+}
+
+
+.imagen{
+    width: 100%;
+    height: 35rem;
+    overflow: hidden;
+    position: relative;
+}
+.imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 35rem;
+    position: relative;
+    overflow: hidden;
+}
+.swiper-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.swiper-slide {
+  flex: 0 0 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0;
+  position: absolute;
+  color: white;
+  top: 50%;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after  {
+    font-size: 10px; /* Tamaño del ícono */
+    color: white; /* Cambiar el color del ícono */
+  }
+.swiper-container:hover .swiper-button-next,
+.swiper-container:hover .swiper-button-prev {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+/* media queries  */
+@media (max-width:1200px){
+    
+    html{
+        font-size: 55%;
+    }
+    .contenido{
+        margin: 0rem 7rem;
+    } 
+}
+
+@media (max-width:900px){
+    .contenido{
+        margin: 0rem 14rem;
+    }  
+
+    .contenido .encabezado{
+        width: 100%;
+    }
+    .contenido article {
+        min-width: 100%;
+    }
+
+    .sidebar {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin-left: 0rem;
+        max-height: max-content;
+    }
+
+    .sidebar .latest-news .principal .imagen{
+        height: 40rem;
+    }
+
+    .sidebar .latest-news .principal p{
+        font-size: 2.5rem;
+    }
+
+
+    .sidebar .latest-news .nota{
+        padding: 2rem 0px;
+        display: block;
+    }
+    .sidebar .latest-news .nota .imagen{
+        width: 100%;
+        height: 40rem;
+        margin-bottom: 0.8rem;
+    }
+ 
+    .sidebar .latest-news .nota p{
+        font-size: 2.5rem;
+        line-height: 1;
+        font-weight: bold;
+        color:#1a1a1a;
+        max-height: 2.4em; /* 3 líneas * 1.2em (aprox 1.2em es el alto de una línea) */
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+}
+
+@media (max-width:700px){
+    .contenido{
+        margin: 0rem 10rem;
+    }
+}
+
+@media (max-width:650px){
+    
+}
+@media (max-width:550px){
+    html{
+        font-size: 55%;
+    }
+    .contenido{
+        margin: 0rem 7rem;
+    }
+
+}
+
+@media (max-width:500px){
+    .contenido{
+        margin: 0rem 4rem;
+    }
+    .sidebar .latest-news .principal .imagen{
+        height: 25rem;
+    }
+    .sidebar .latest-news .principal p{
+        font-size: 2rem;
+    }
+
+
+    .sidebar .latest-news .nota p{
+        font-size: 2rem;
+    }
+    .sidebar .latest-news .nota .imagen{
+        height: 25rem;
+    }
+}
+
+@media (max-width:400px){
+
+    
+}
+
+@media (max-width:350px){
+    
+
+}
+
+@media (max-width:300px){
+    .contenido{
+        margin: 0rem 2rem;
+    }
+
+}

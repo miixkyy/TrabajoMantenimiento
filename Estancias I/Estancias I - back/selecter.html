@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contenedor de arrastrar y soltar imágenes</title>
+  <style>
+    #drop-zone {
+      width: 300px;
+      height: 300px;
+      border: 2px dashed #ccc;
+      text-align: center;
+      line-height: 300px;
+      font-size: 20px;
+    }
+
+    #drop-zone.dragging {
+      border-color: #888;
+    }
+
+    #drop-zone.valid {
+      border-color: #00e600;
+    }
+
+    #drop-zone.invalid {
+      border-color: #ff0000;
+    }
+
+    #preview {
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="drop-zone">Arrastra y suelta imágenes aquí</div>
+  <div id="preview"></div>
+  
+  <textarea id="miTextarea" rows="4" cols="50" maxlength="500" oninput="actualizarContador()"></textarea>
+  <div id="contador">0/500 caracteres</div>
+
+  <script>
+    function actualizarContador() {
+        const textarea = document.getElementById("miTextarea");
+        const contador = document.getElementById("contador");
+        const caracteresRestantes = textarea.value.length;
+        contador.textContent = `${caracteresRestantes}/500 caracteres`;
+    }
+  </script>
+    
+  <script>
+    var dropZone = document.getElementById('drop-zone');
+    var preview = document.getElementById('preview');
+
+    dropZone.addEventListener('dragover', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      dropZone.classList.add('dragging');
+    });
+
+    dropZone.addEventListener('dragleave', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      dropZone.classList.remove('dragging');
+    });
+
+    dropZone.addEventListener('drop', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      dropZone.classList.remove('dragging');
+
+      var files = e.dataTransfer.files;
+      showPreview(files);
+    });
+
+    function showPreview(files) {
+  preview.innerHTML = '';
+
+  for (var i = 0; i < files.length; i++) {
+    var file = files[i];
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      var image = new Image();
+      image.src = e.target.result;
+      image.style.width = '200px';
+      image.style.height = '200px';
+      image.style.marginRight = '20px';
+      image.style.objectFit = 'cover'; // Para recortar la imagen a 200x200
+      preview.appendChild(image);
+    };
+
+    reader.readAsDataURL(file);
+  }
+
+  preview.style.display = 'block';
+}
+
+  </script>
+</body>
+</html>

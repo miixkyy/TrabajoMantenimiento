@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicación de Noticias</title>
+  <link rel="stylesheet" href="css/style-publicacion.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+</head>
+<body>
+<div class="contenido">
+    <div class="encabezado">
+        <p>Política</p>
+        <h1>Taylor Swift entrega una bonificación de US$ 100.000 a los camioneros del Eras Tour</h1>
+    </div>
+    <article>
+        <div class="imagen">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="imagenes/image 2.png">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imagenes/image 3.png">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imagenes/image 4.png">
+                  </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>       
+        </div>  
+        <p>Fecha: 6 de agosto de 2023</p>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada ege. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada ege. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada ege...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada ege. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada ege. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada ege...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada ege. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada ege. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida turpis id turpis commodo, eu eleifend enim gravida. Proin efficitur auctor justo, vel elementum libero malesuada ege...</p>
+    </article> 
+    <div class="sidebar">
+        <div class="latest-news">
+            <h3>Últimas Noticias</h3>
+            <div class="linea-horizontal">
+                <div></div>
+            </div>
+            <div class="principal">
+                <div class="imagen">
+                    <img src="imagenes/image 2.png" alt="">
+                </div>
+                <p>Taylor Swift entrega una bonificación de US$ 100.000 a los camioneros del Eras Tour</p>
+            </div>
+            <div class="nota">
+                <div class="imagen">
+                    <img src="imagenes/image 3.png" alt="">
+                </div>
+                <p>Taylor Swift entrega una bonificación de US$ 100.000 a los camioneros del Eras Tour</p>
+            </div>
+            <div class="nota">
+                <div class="imagen">
+                    <img src="imagenes/image 2.png" alt="">
+                </div>
+                <p>Taylor Swift entrega una bonificación de US$ 100.000 a los camioneros del Eras Tour</p>
+            </div>
+            <div class="nota">
+                <div class="imagen">
+                    <img src="imagenes/image 4.png" alt="">
+                </div>
+                <p>Taylor Swift entrega una bonificación de US$ 100.000 a los camioneros del Eras Tour</p>
+            </div>
+
+            
+
+        </div>
+    </div>
+</div>
+    
+</body>
+
+<!-- Al final del body -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  // Inicializar Swiper cuando el DOM esté listo
+  document.addEventListener("DOMContentLoaded", function () {
+    var mySwiper = new Swiper(".swiper-container", {
+      // Opciones del slider (puedes personalizarlo según tus necesidades)
+      loop: true,
+      spaceBetween: 30,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3000,       // Tiempo de intervalo entre diapositivas en milisegundos
+      },
+    });
+  });
+</script>
